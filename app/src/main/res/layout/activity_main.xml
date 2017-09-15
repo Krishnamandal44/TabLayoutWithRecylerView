@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:minHeight="?attr/actionBarSize"
+        app:tabTextColor="#dfdbdb"
+        app:tabIndicatorColor="#FF025CBD"
+        app:tabIndicatorHeight="3dp"
+        app:tabSelectedTextColor="#0277bd"
+        app:tabTextAppearance="@style/TabLayoutStyle"
+        android:layout_weight="1"
+
+        app:tabGravity="fill"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+    </android.support.design.widget.TabLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLoginText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="80"
+        android:layout_marginRight="10dp">
+
+    </android.support.v4.view.ViewPager>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingBottom="5dp">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            card_view:cardBackgroundColor="@color/cardview_light_background"
+            card_view:cardCornerRadius="6dp"
+            android:layout_margin="5dp"
+            android:layout_centerHorizontal="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".3"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/sortby"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum=".6"
+                        android:clickable="true"
+                        android:background="@color/colorButtonActive">
+                        <TextView
+                            style="@style/TitleTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".3"
+                            android:text="Sort By"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:padding="0dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorWhite" />
+                        <TextView
+                            style="@style/DescriptionTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".3"
+                            android:gravity="center"
+                            android:text="Popular"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+                </LinearLayout>
+                <android.support.v4.widget.Space
+                    android:layout_width="1dp"
+                    android:layout_height="1dp" />
+
+                <Button
+                    android:id="@+id/next_button"
+                    style="@style/TitleTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight=".3"
+                    android:layout_height="match_parent"
+                    android:text="Filters"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:background="@color/colorButtonActive"
+                    android:textColor="@color/colorWhite"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</LinearLayout>

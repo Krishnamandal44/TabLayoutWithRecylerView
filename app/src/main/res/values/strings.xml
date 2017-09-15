@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TabLayoutWithRecylerView</string>
+    <string name="strike_25000_strike"><strike> 25,500 </strike></string>
+</resources>
